@@ -10,6 +10,8 @@ The reconstruction error is given by the difference (computed with the [euclidea
 
 ## Examples
 
+The following examples visualize cases, where the machine learning model detects an anomalous event based on the reconstruction error exceeding the learned threshold. Note that the dynamic threshold of an _rIFTM_-model doesn't get adjusted on predicted anomalies.
+
 Plotting reconstruction errors and dynamic thresholding without classes (hide_classes=True)
 
 
