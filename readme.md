@@ -11,12 +11,18 @@ The reconstruction error is given by the difference (we computed the [euclidean 
 ## Examples
 
 Plotting reconstruction errors and dynamic thresholding without classes (hide_classes=True)
+
+
 ![Example 1](example_export/no_labels_example.gif)
 
 Plotting classes denoted with colors (hide_classes=False)
+
+
 ![Example 2](example_export/show_labels_example.gif)
 
 Plotting sliding window standard deviation and dynamic thresholding on the reconstruction errors. The sliding window standard deviation is an alternative approach to monitor the pattern of reconstruction errors in a sliding window instead of modeling the upper boundary of the normal reconstruction errors. (hide_classes=False, show_srd=True, std_window_size=20)
+
+
 ![Example 3](example_export/no_labels_std_example.gif)
 
 ## Settings
