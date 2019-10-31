@@ -4,9 +4,9 @@
 
 This simple python class visualizes an anomaly detection model for data streams with [matplotlib animations](https://matplotlib.org/3.1.1/api/animation_api.html). 
 
-The machine learning model (called _rIFTM_, a more robust version of [this](https://www.researchgate.net/publication/327484223_IFTM_-_Unsupervised_Anomaly_Detection_for_Virtualized_Network_Function_Services) approach) learns to predict the normal operation mode of a monitored cloud service from solely normal data by using an LSTM neural network and applies dynamic thresholding (we apply a combination of cumulative aggregation functions) on the history of previous reconstruction errors. 
+The machine learning model (called _rIFTM_, a more robust version of [this](https://www.researchgate.net/publication/327484223_IFTM_-_Unsupervised_Anomaly_Detection_for_Virtualized_Network_Function_Services) approach) learns to predict the normal operation mode of a monitored cloud service from solely normal data by using an LSTM neural network and applies dynamic thresholding (using a combination of cumulative aggregation functions) on the history of previous reconstruction errors. 
 
-The reconstruction error is given by the difference (we computed the [euclidean distance](https://en.wikipedia.org/wiki/Euclidean_distance)) between the neural network's prediction for time step t and the actual preserved value at the given time step.
+The reconstruction error is given by the difference (computed with the [euclidean distance](https://en.wikipedia.org/wiki/Euclidean_distance)) between the neural network's prediction for time step t and the actual observed value at the given time step.
 
 ## Examples
 
@@ -20,7 +20,7 @@ Plotting classes denoted with colors (hide_classes=False)
 
 ![Example 2](example_export/show_labels_example.gif)
 
-Plotting sliding window standard deviation and dynamic thresholding on the reconstruction errors. The sliding window standard deviation is an alternative approach to monitor the pattern of reconstruction errors in a sliding window instead of modeling the upper boundary of the normal reconstruction errors. (hide_classes=False, show_srd=True, std_window_size=20)
+Plotting sliding window standard deviation and dynamic thresholding on the reconstruction errors. The sliding window standard deviation is an alternative approach to monitor the pattern of reconstruction errors in a sliding window instead of modeling the upper boundary of the normal reconstruction errors. (hide_classes=False, show_std=True, std_window_size=20)
 
 
 ![Example 3](example_export/no_labels_std_example.gif)
